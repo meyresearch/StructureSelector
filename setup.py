@@ -7,16 +7,13 @@ authors=("Antonia Mey <antonia.mey@gmail.com, "
          "Jordi Juárez Jiménez <jordi.juarez@gmail.com>")
 
 # Run the setup.
-try:
-    setup(name='StructureSelector',
+setup(name='StructureSelector',
           version=versioneer.get_version(),
           cmdclass=versioneer.get_cmdclass(),
           description='StructureSelector makes it easy to select the correct PdB to Dock against or run MD with',
           author=authors,
           url='https://github.com/michellab/StructureSelector',
           license='MIT',
-          packages=find_packages(),
-          zip_safe=True,
           classifiers=[
             'Development Status :: 2 - Pre-Alpha',
             'Environment :: Console',
@@ -39,5 +36,4 @@ try:
             'Diffucsion Map',
             'Protein database'
         ]
-    )
-
+)
