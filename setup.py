@@ -1,5 +1,11 @@
 from setuptools import setup
 import versioneer
+from setuptools import find_packages
+from glob import glob
+from os.path import basename
+from os.path import dirname
+from os.path import join
+from os.path import splitext
 
 
 # A list of authors and their email addresses.
@@ -14,6 +20,11 @@ setup(name='StructureSelector',
           author=authors,
           url='https://github.com/michellab/StructureSelector',
           license='MIT',
+          packages=find_packages('src'),
+          package_dir={'': 'src'},
+          py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
+          include_package_data=True,
+          zip_safe=False,
           classifiers=[
             'Development Status :: 2 - Pre-Alpha',
             'Environment :: Console',
