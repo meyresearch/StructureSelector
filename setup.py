@@ -35,5 +35,8 @@ setup(name='StructureSelector',
             'RMSD',
             'Diffucsion Map',
             'Protein database'
+        ],
+          install_requires=[
+        'numpy', 'scipy', 'scikit-learn', 'matplotlib'
         ]
 )
