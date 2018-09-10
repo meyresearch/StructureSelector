@@ -35,8 +35,11 @@ class Prepper(object):
                 print('File does not exist retrieving pdbid %s' %pdb_ID)
                 url = link+pdb_file
                 r = requests.get(url)
-                f = open(download_file, 'bw')
-                f.write(r.content)
+                if r:
+                    f = open(download_file, 'bw')
+                    f.write(r.content)
+                    f.close()
+
 
     def clean_pdb(self, pdbfile):
 
