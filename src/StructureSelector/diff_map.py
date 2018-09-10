@@ -26,10 +26,10 @@ class DiffMap(object):
         """
         if self.epsilon is None:
             self.epsilon = epsilon
-        if self.epsilon is None:
+        elif self.epsilon is None:
             raise("Error: no epsilon given")
-
-        self.diffusion_kernel = np.exp(-self.K**2/self.epsilon)
+        if kernel is 'gaussian':
+            self.diffusion_kernel = np.exp(-self.K**2/self.epsilon)
         else:
             raise("Error: Kernel type not understood.")
         

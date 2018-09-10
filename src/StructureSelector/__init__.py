@@ -5,6 +5,7 @@ del get_versions
 
 
 from . import diff_map
+from . import prepper
 
 
-__all__ = ['diff_map']
+__all__ = ['diff_map', 'prepper']

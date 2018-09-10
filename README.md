@@ -20,3 +20,5 @@ or use the latest stable version on pypi:
 Other influences:
 https://github.com/jmbr/diffusion-maps
 https://github.com/DiffusionMapsAcademics/pyDiffMap
+
+conda install -c samoturk pymol
